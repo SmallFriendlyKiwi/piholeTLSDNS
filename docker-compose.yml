@@ -15,7 +15,7 @@ services:
   pihole:
     hostname: pihole
     container_name: pihole
-    image: pihole/pihole:v4.0_armhf
+    image: pihole/pihole:4.2.2_armhf
     restart: unless-stopped
     volumes:
       - data_1:/etc/pihole/
@@ -25,12 +25,11 @@ services:
       - "53:53/tcp"
       - "53:53/udp"
     environment:
-      - ServerIP=10.0.0.3
       - IPv6=false
       - DNSMASQ_LISTENING=all
       - WEBPASSWORD=
-      - DNS1=10.0.0.2
-      - DNS2=no
+      - DNS1=127.0.0.1
+      - DNS2=10.0.0.2
     networks:
       net:
         ipv4_address: 10.0.0.3
