@@ -29,6 +29,7 @@ services:
       - DNSMASQ_LISTENING=all
       - WEBPASSWORD=
       - DNS1=10.0.0.2
+      - DNS2=10.0.0.2
     networks:
       net:
         ipv4_address: 10.0.0.3
