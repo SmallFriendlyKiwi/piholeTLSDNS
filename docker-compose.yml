@@ -15,7 +15,7 @@ services:
   pihole:
     hostname: pihole
     container_name: pihole
-    image: pihole/pihole:4.3.1-4_armhf 
+    image: pihole/pihole:4.3.2-1_armhf 
     restart: unless-stopped
     volumes:
       - data_1:/etc/pihole/
